@@ -11,3 +11,4 @@ RUN useradd --system --uid 10001 app
 COPY --from=build /app/.venv /app/.venv
 ENV PATH="/app/.venv/bin:$PATH"
 USER app
+CMD ["python", "-m", "intent_engine.main"]
