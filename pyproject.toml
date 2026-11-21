@@ -1,0 +1,21 @@
+[project]
+name = "intent-engine"
+version = "0.0.1"
+description = "Chronos Intent Engine: natural-language intents to validated DSL rules"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "ruff",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 100
