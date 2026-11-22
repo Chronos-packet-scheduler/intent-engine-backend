@@ -6,7 +6,7 @@ RUN uv sync --frozen --no-dev --no-install-project
 COPY . .
 RUN uv sync --frozen --no-dev --no-editable
 
-FROM python:3.13-slim-bookworm
+FROM python:3.15-slim-bookworm
 RUN useradd --system --uid 10001 app
 COPY --from=build /app/.venv /app/.venv
 ENV PATH="/app/.venv/bin:$PATH"
